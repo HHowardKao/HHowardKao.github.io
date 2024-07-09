@@ -1,0 +1,266 @@
+* {
+  /* 將預設的padding和margin歸零 */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* 設定字體為標楷體 */
+  font-family: DFkai-sb, sans-serif;
+}
+nav {
+  background-color: cadetblue;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  /* justify-content: space-around; 確保每個項目在容器中平均分布。 */
+  /* align-items: center; 確保所有項目在垂直方向上居中對齊。 */
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+nav ul li {
+  /* 上下留白為0.8rem 左右留白為1.2rem */
+  padding: 0.8rem 1.2rem;
+}
+nav ul li a:hover {
+  color: lightgoldenrodyellow;
+}
+.active {
+  color: lightgoldenrodyellow;
+}
+div.top {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 20px;
+  background-image: url("./images/NCTU2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+div.top h1 {
+  color: black;
+  font-size: 2.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* 預設粗體字改成普通字 */
+  font-weight: normal;
+}
+main {
+  /* 希望能讓版面可以左右擺放 */
+  display: flex;
+  /* 希望可以符合不同介面能夠自由伸縮 */
+  flex-wrap: wrap;
+}
+section.left {
+  flex: 1 1 70px;
+  padding-left: 10px;
+}
+.myself {
+  display: flex;
+  flex-wrap: wrap;
+}
+.myself figure img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+main section {
+  padding: 1.2rem;
+}
+.left h3 {
+  background-color: cadetblue;
+  color: white;
+  width: 80%;
+  text-align: center;
+}
+.right h3 {
+  background-color: cadetblue;
+  color: white;
+  width: 80%;
+  text-align: center;
+}
+.NCTU,
+.NTHU {
+  display: flex;
+  align-items: center;
+}
+.NCTU img,
+.NTHU img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.phone img,
+.mail img,
+.instagram img,
+.facebook img,
+.line img {
+  width: 30px;
+  height: 30px;
+}
+.phone,
+.mail,
+.instagram,
+.facebook,
+.line,
+.ey,
+.imfcamp,
+.imf,
+.eyp {
+  display: flex;
+  align-items: center;
+  /* margin: 0.5rem; */
+}
+.left a,
+.phone p,
+.mail p {
+  text-decoration-line: none;
+  color: black;
+  margin-left: 1rem;
+}
+section.right {
+  flex: 1 1 50px;
+  margin-top: 4rem;
+  padding-left: 10px;
+}
+.name {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2.3rem;
+  margin-left: 1.5rem;
+}
+.ey img,
+.imfcamp img,
+.imf img,
+.eyp img {
+  width: 50px;
+  height: 50px;
+}
+.course table,
+.course th,
+.course td,
+.fin table,
+.fin th,
+.fin td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 2px 4px;
+  margin-left: 10px;
+  text-align: center;
+}
+.course th,
+.fin th {
+  background-color: cadetblue;
+  color: white;
+  font-weight: normal;
+}
+.course table,
+.fin table {
+  width: 400px;
+}
+.P2table {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+}
+.P2table caption {
+  font-weight: bold;
+}
+.eytext {
+  margin: 1rem;
+  border: 3px solid cadetblue;
+  padding: 0.5rem;
+  width: 650px;
+  height: 200px;
+}
+.eytext h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: cadetblue;
+}
+.eytext ul {
+  padding-left: 1rem;
+}
+.eytext ul li {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.event2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.event2 img {
+  height: 200px;
+  width: 266px;
+  margin-right: 5px;
+}
+.project1 ol {
+  margin-left: 25px;
+}
+.Step1 img,
+.Step2 img,
+.Step3 img,
+.Step4 img,
+.show img {
+  width: 650px;
+  height: 400px;
+}
+.Step1,
+.Step2,
+.Step4,
+.show {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project1 h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.project1 h4 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.Step1,
+.Step2,
+.Step4 {
+  align-items: center;
+}
+.Step1,
+.Step2,
+.Step3,
+.Step4,
+.show {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.Step2-2 ul {
+  margin-left: 60px;
+}
+.Step2-2 p {
+  margin-left: 45px;
+}
+.Step1 ol,
+.step4-2 ol {
+  margin-left: 60px;
+}
+.Step1 ol li,
+.Step2-2 ul li,
+.step4-2 ol li,
+.Step2-2 p {
+  margin-bottom: 50px;
+}

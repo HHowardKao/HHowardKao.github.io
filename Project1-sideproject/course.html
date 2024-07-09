@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>個人履歷網頁</title>
+    <link rel="stylesheet" href="./sstyle.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <h1>個人履歷網頁</h1>
+        <h3>本網頁為HTML、CSS的基礎應用</h3>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">個人簡歷</a></li>
+          <li><a class="active" href="#">修課經歷</a></li>
+          <li><a href="event.html">實習與活動經歷</a></li>
+          <li><a href="project.html">專案範例</a></li>
+        </ul>
+      </nav>
+      <script
+        type="text/javascript"
+        src="https://www.gstatic.com/charts/loader.js"
+      ></script>
+      <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ["修課類型", "比例"],
+            ["資訊類課程", 14],
+            ["財金類課程", 15],
+            ["語文類課程", 6],
+            ["通識類課程", 9],
+            ["其他必選修課程", 25],
+          ]);
+
+          var options = {
+            title: "修習課程類型",
+          };
+
+          var chart = new google.visualization.PieChart(
+            document.getElementById("piechart")
+          );
+
+          chart.draw(data, options);
+        }
+      </script>
+    </header>
+    <main>
+      <section class="P2table">
+        <div class="course">
+          <table>
+            <caption>
+              資訊相關課程
+            </caption>
+            <tr>
+              <th>課程名稱</th>
+              <th>分數</th>
+            </tr>
+            <tr>
+              <td>計算機概論</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td>程式設計(C++)</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>資料結構</td>
+              <td>B</td>
+            </tr>
+            <tr>
+              <td>演算法</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>資料庫管理</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td>計算機網路概論</td>
+              <td>B+</td>
+            </tr>
+            <tr>
+              <td>人工智慧理論與實作</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td>資訊安全</td>
+              <td>A+</td>
+            </tr>
+            <tr>
+              <td>巨量資料分析</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>資料科學</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td>Python程式設計</td>
+              <td>A+</td>
+            </tr>
+            <tr>
+              <td>管理資訊系統</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>大數據入門分析與實務研討</td>
+              <td>A+</td>
+            </tr>
+            <tr>
+              <td>前端網頁系統開發概論</td>
+              <td>A+</td>
+            </tr>
+          </table>
+        </div>
+        <div class="fin">
+          <table>
+            <caption>
+              財金相關課程
+            </caption>
+            <tr>
+              <th>課程名稱</th>
+              <th>分數</th>
+            </tr>
+            <tr>
+              <td>經濟學(一)</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td>經濟學(二)</td>
+              <td>A+</td>
+            </tr>
+            <tr>
+              <td>會計學(一)</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td>會計學(二)</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td>金融科技概論</td>
+              <td>B+</td>
+            </tr>
+            <tr>
+              <td>個體經濟學</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td>總體經濟學</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>投資學</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>公司理財</td>
+              <td>A+</td>
+            </tr>
+            <tr>
+              <td>統計學(一)</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td>統計學(二)</td>
+              <td>A+</td>
+            </tr>
+            <tr>
+              <td>管理學</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td>元大金融科技講堂</td>
+              <td>A+</td>
+            </tr>
+            <tr>
+              <td>賽局與策略</td>
+              <td>A+</td>
+            </tr>
+          </table>
+        </div>
+        <div id="piechart" style="width: 630px; height: 400px"></div>
+      </section>
+    </main>
+    <script
+      color="0,0,0"
+      opacity="0.5"
+      zindex="-2"
+      count="400"
+      src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js"
+      integrity="sha512-P+NGabN/TJDOnCVOFJO+E06TBm4i+M8dTT91lWg/8UpwLrzicEXIypmABPpA47D0x6r+yxFHjYIZKWhc1h7xlQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

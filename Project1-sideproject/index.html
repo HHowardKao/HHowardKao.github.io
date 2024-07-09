@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>個人履歷網頁</title>
+    <link rel="stylesheet" href="./sstyle.css" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["項目", "Score", { role: "style" }],
+          ["JavaScript", 75, "lightpink"],
+          ["C++", 85, "lightyellow"],
+          ["Python", 90, "lightgreen"],
+          ["SQL", 70, "lightblue"],
+          ["HTML+CSS", 80, "orchid"],
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        view.setColumns([
+          0,
+          1,
+          {
+            calc: "stringify",
+            sourceColumn: 1,
+            type: "string",
+            role: "annotation",
+          },
+          2,
+        ]);
+
+        var options = {
+          width: 500,
+          height: 150,
+          bar: { groupWidth: "95%" },
+          legend: { position: "none" },
+          hAxis: {
+            viewWindow: {
+              min: 0,
+              max: 100,
+            },
+          },
+        };
+        var chart = new google.visualization.BarChart(
+          document.getElementById("barchart_values")
+        );
+        chart.draw(view, options);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <h1>個人履歷網頁</h1>
+        <h3>本網頁為HTML、CSS的基礎應用</h3>
+      </div>
+      <nav>
+        <ul>
+          <li><a class="active" href="#">個人簡歷</a></li>
+          <li><a href="course.html">修課經歷</a></li>
+          <li><a href="event.html">實習與活動經歷</a></li>
+          <li><a href="project.html">專案範例</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="left">
+        <div class="myself">
+          <figure>
+            <img src="./images/kao.jpg" alt="大頭照" />
+          </figure>
+          <div class="name">
+            <h4>高國豪</h4>
+            <h5>KUO-HAO,KAO</h5>
+            <h5>國立清華大學|資訊安全研究所</h5>
+          </div>
+        </div>
+        <h3>聯絡資訊:</h3>
+        <div class="phone">
+          <img src="/images/phone-call.png" alt="電話號碼" />
+          <p>0966-722-930</p>
+        </div>
+        <div class="mail">
+          <img src="./images/mail.png" alt="電子信箱" />
+          <p>grapekao2017@gmail.com</p>
+        </div>
+        <div class="line">
+          <img src="./images/line.png" alt="Line" />
+          <a href="https://line.me/ti/p/_ykueuja-X" target="_blank"
+            >LINE個人檔案連結</a
+          >
+        </div>
+        <div class="facebook">
+          <img src="./images/facebook.png" alt="Facebook" />
+          <a
+            href="https://www.facebook.com/profile.php?id=100003903380093&mibextid=LQQJ4d"
+            target="_blank"
+            >FaceBook個人檔案連結</a
+          >
+        </div>
+        <div class="instagram">
+          <img src="./images/instagram.png" alt="Instagram" />
+          <a
+            href="https://www.instagram.com/_grape.1015?igsh=MXBjZDB4c3piNGhoYw%3D%3D&utm_source=qr"
+            target="_blank"
+            >Instagram個人檔案連結</a
+          >
+        </div>
+        <h3>教育程度:</h3>
+        <div class="NCTU">
+          <img src="./images/nycu.png" alt="交大校徽" />
+          <p>國立陽明交通大學:資訊管理與財務金融學系(畢業)</p>
+        </div>
+        <div class="NTHU">
+          <img src="./images/NTHU.png" alt="清大校徽" />
+          <p>國立清華大學:資訊安全研究所(碩一就學中)</p>
+        </div>
+      </section>
+      <section class="right">
+        <h3>實習與活動:</h3>
+        <div class="ey">
+          <img src="./images/ey.png" alt="EY" />
+          <p>
+            安永諮詢服務股份有限公司-數位新興科技諮詢服務實習生(2024.03~2024.07)
+          </p>
+        </div>
+        <div class="eyp">
+          <img src="./images/NTHU.png" alt="EYP" />
+          <p>
+            國立清華大學<探索你的可能性>教育計畫-課堂助教兼講師(2023.02~2023.06)
+          </p>
+        </div>
+        <div class="imfcamp">
+          <img src="./images/nycu.png" alt="nycu" />
+          <p>國立陽明交通大學資財系-資財營隊輔長(2021.09~2022.02)</p>
+        </div>
+        <div class="imf">
+          <img src="./images/nycu.png" alt="nycu" />
+          <p>國立陽明交通大學資財系-資財系系學會活動組(2020.09~2022.06)</p>
+        </div>
+        <h3>專長與技能:</h3>
+        <div id="barchart_values"></div>
+      </section>
+    </main>
+    <script
+      color="0,0,0"
+      opacity="0.5"
+      zindex="-2"
+      count="400"
+      src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js"
+      integrity="sha512-P+NGabN/TJDOnCVOFJO+E06TBm4i+M8dTT91lWg/8UpwLrzicEXIypmABPpA47D0x6r+yxFHjYIZKWhc1h7xlQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

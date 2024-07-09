@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>個人履歷網頁</title>
+    <link rel="stylesheet" href="./sstyle.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <h1>個人履歷網頁</h1>
+        <h3>本網頁為HTML、CSS的基礎應用</h3>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">個人簡歷</a></li>
+          <li><a href="course.html">修課經歷</a></li>
+          <li><a href="event.html">實習與活動經歷</a></li>
+          <li><a class="active" href="#">專案範例</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="project1">
+          <h3>專案(一):清大資安所教授研究領域分析</h3>
+          <h4>主題與動機:</h4>
+          <p>
+            當初我即將入學清大資安所。對於研究生而言，最重要的事情就是找指導教授。
+          </p>
+          <p>
+            而學生通常會依據教授的專長作為選擇實驗室的依據，因此我想進行清大資安所教授的研究領域分析。
+          </p>
+          <h4>目標規劃:</h4>
+          <p>將清大資安所教授的研究領域透過文字雲的方式呈現。</p>
+          <h4>實作流程:</h4>
+          <p>Step1:利用Selenium套件爬取台灣碩博士論文網的內容</p>
+          <div class="Step1">
+            <img src="./images/step1.png" alt="step1" />
+            <ol>
+              <li>爬取網址:台灣碩博士論文網</li>
+              <li>點選進階查詢，欄位分別輸入"清大"與"資訊安全研究所"</li>
+              <li>點選進第一篇碩士論文</li>
+              <li>
+                目標共有二十六篇論文，因此利用Selenium自動化進行多頁網路爬蟲
+              </li>
+            </ol>
+          </div>
+          <p>
+            Step2:利用BeautifulSoup套件從中擷取三大關鍵資訊:1.論文名稱2.指導教授3.研究領域
+          </p>
+          <div class="Step2">
+            <img src="./images/step2.png" alt="step2" />
+            <div class="Step2-2">
+              <p>預期擷取的資訊為:(已此頁面為例)</p>
+              <ul>
+                <li>
+                  論文名稱:基於政府身份認證平台的真實身份驗證方法研究:應用於社群登入與網路服務
+                </li>
+                <li>指導教授:孫宏民</li>
+                <li>研究領域:社群登入、單一簽入、自然人憑證</li>
+              </ul>
+            </div>
+          </div>
+          <p>Step3:利用csv套件寫入與讀取csv檔案進行儲存</p>
+          <div class="Step3">
+            <img src="./images/happycoder3.png" alt="step3" />
+          </div>
+          <p>Step4:讀取csv檔案，利用wordcloud套件進行文字雲製作</p>
+          <div class="Step4">
+            <img src="./images/happycoder2.png" alt="step4" />
+            <div class="step4-2">
+              <ol>
+                <li>讀取CSV檔案並以指導教授(professor)為依據分類</li>
+                <li>提取各個指導教授的中文關鍵詞(research)</li>
+                <li>
+                  利用wordcloud文字雲套件，將教授與其研究領域之關聯製作成文字雲的圖表呈現
+                </li>
+              </ol>
+            </div>
+          </div>
+          <h4>成果展示:</h4>
+          <dis class="show">
+            <img src="./images/show1.png" alt="" />
+            <img src="./images/show2.png" alt="" />
+            <img src="./images/show3.png" alt="" />
+            <img src="./images/show4.png" alt="" />
+          </dis>
+        </div>
+      </section>
+    </main>
+    <script
+      color="0,0,0"
+      opacity="0.5"
+      zindex="-2"
+      count="400"
+      src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js"
+      integrity="sha512-P+NGabN/TJDOnCVOFJO+E06TBm4i+M8dTT91lWg/8UpwLrzicEXIypmABPpA47D0x6r+yxFHjYIZKWhc1h7xlQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
