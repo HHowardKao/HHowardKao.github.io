@@ -1,0 +1,405 @@
+$themeColor: rgb(249, 249, 169);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  position: relative;
+
+  img.fixed-image {
+    min-height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: -5;
+    bottom: 0;
+    left: 0;
+  }
+  header {
+    background-color: cadetblue;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    section.logo {
+      //   border: 2px solid green;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex: 2 1 100px;
+      img {
+        width: 6vw;
+        height: 6vw;
+      }
+      h1 {
+        font-size: 2.5rem;
+        color: white;
+      }
+    }
+    nav {
+      //   border: 2px solid green;
+      flex: 5 1 600px;
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; //將子項目均勻地分佈在容器中
+        li {
+          a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.2s ease;
+            &:hover {
+              color: $themeColor;
+              border-bottom: 3px solid $themeColor; //hover效果加底線
+            }
+          }
+          a.active {
+            color: $themeColor;
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.background-img {
+      min-height: 70vh;
+      background-image: url("../images/1.jpg");
+      background-size: cover;
+      background-position: center;
+      transition: all 0.75s ease;
+      position: relative;
+      z-index: 0; // stacking context
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div.filter {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        min-height: 70vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+      h3 {
+        color: white;
+        font-size: 2.5rem;
+        text-align: center;
+      }
+    }
+    section.empty-container {
+      overflow-x: auto;
+      table.schedule {
+        border-collapse: collapse;
+        min-height: 70vh;
+        width: 100%;
+        //table-layout: fixed;
+        th.title {
+          background-color: cadetblue;
+        }
+        th {
+          border: 1px solid black;
+          text-align: center;
+        }
+        td {
+          border: 1px solid black;
+          text-align: center;
+        }
+        tr {
+          border: 1px solid black;
+          text-align: center;
+          font-size: 0.7rem;
+        }
+        tr.one {
+          background-color: lightpink;
+        }
+        tr.two {
+          background-color: white;
+        }
+      }
+    }
+    section.google-map {
+      background-color: white;
+      iframe {
+        width: 100%;
+        height: 40vh;
+      }
+      h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: cadetblue;
+        color: white;
+      }
+    }
+  }
+  footer {
+    display: flex;
+    background-color: cadetblue;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    section.logo2 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      img {
+        width: 4vw;
+        height: 4vw;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+    section.links {
+      img {
+        width: 3vw;
+        height: 3vw;
+        transition: all 0.1s ease-in;
+        padding: 0.3rem;
+        &:hover {
+          border: 3px solid $themeColor;
+        }
+      }
+    }
+  }
+  section.map {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 置中 */
+    padding-bottom: 1rem;
+    h3 {
+      font-size: 2rem;
+      color: white;
+    }
+    img {
+      width: 80%;
+      min-height: 70vh;
+    }
+  }
+  section.empty-container {
+    min-height: 70vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    section.info-circles {
+      // background-color: white;
+      padding: 2rem 1rem;
+
+      h3 {
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+      }
+
+      div.circles1,
+      div.circles2 {
+        //border: 3px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        min-height: 30vh;
+        width: 100%;
+        div.circle {
+          padding: 1rem 1rem;
+          //border: 3px solid red;
+          flex: 0 1 250px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: white;
+          p {
+            font-size: 0.67rem;
+          }
+          img {
+            width: 65%;
+            height: 80%;
+            border-radius: 50%;
+            transition: all 0.1s ease-in;
+            //padding: 0.3rem;
+            &:hover {
+              border: 3px solid $themeColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  section.hotel1-map,
+  section.hotel2-map {
+    //border: 5px solid cadetblue;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 3px solid cadetblue;
+    padding: 0rem 1rem;
+    margin: 1rem 1rem;
+    p {
+      font-size: 1rem;
+      flex-basis: 100%;
+    }
+    h3 {
+      font-size: 2rem;
+      align-items: center;
+      flex-basis: 100%;
+    }
+    img {
+      padding: 2rem 0rem;
+      padding-right: 1rem;
+      width: 30%;
+      height: 40vh;
+    }
+    iframe {
+      width: 30%;
+      height: 40vh;
+      padding: 2rem 0rem;
+    }
+  }
+  section.airplane,
+  section.haruka,
+  section.kyoto,
+  section.osaka,
+  section.jr {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 置中 */
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    h3 {
+      font-size: 2rem;
+      flex-basis: 100%;
+      color: white;
+    }
+
+    img {
+      width: 50%;
+      height: 80vh;
+      //padding-left: 2rem;
+      border: 3px solid black;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    header {
+      section.logo {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column; /* 垂直排列 */
+        align-items: center; /* 置中 */
+
+        img {
+          width: 10vw;
+          height: 10vw;
+        }
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+      nav {
+        ul {
+          flex-direction: column;
+          li {
+            // padding: 0.5rem 0.25rem;
+            text-align: center;
+            a {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    table.schedule th.title {
+      font-size: 0.6rem;
+      width: auto;
+    }
+    table.schedule td {
+      font-size: 0.5rem;
+      width: auto;
+    }
+    footer {
+      section.logo2 {
+        h3 {
+          font-size: 1rem;
+        }
+      }
+      section.links {
+        img {
+          width: 6vw;
+          height: 6vw;
+        }
+      }
+    }
+    section.map {
+      img {
+        width: 100%;
+      }
+    }
+
+    section.hotel1-map,
+    section.hotel2-map {
+      flex-direction: column;
+      padding: 0rem 0rem;
+      img {
+        width: 100%;
+        padding: 0.5rem 2rem;
+      }
+      iframe {
+        width: 100%;
+        padding: 0rem 2rem;
+        margin-bottom: 2rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      p {
+        font-size: 0.8rem;
+        text-align: center;
+      }
+    }
+    section.airplane,
+    section.haruka,
+    section.kyoto,
+    section.osaka,
+    section.jr {
+      padding: 0rem 0rem;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column; /* 垂直排列 */
+      align-items: center; /* 置中 */
+
+      //padding-bottom: 10rem;
+      h3 {
+        font-size: 2rem;
+        padding: 2rem 0rem;
+      }
+      img {
+        padding: 0rem 0rem;
+        width: 100%;
+        height: 70vh;
+        border: 0px solid;
+      }
+    }
+  }
+}
