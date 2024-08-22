@@ -188,7 +188,7 @@ body main section.GPA div.result h2 {
   }
   body main section.GPA form div.input select {
     border-radius: 0.25rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border: 0.25px solid black;
     padding: 0.3rem;
     margin: 0.3rem 0.1rem;
@@ -199,7 +199,7 @@ body main section.GPA div.result h2 {
     background-color: rgb(127, 16, 132);
   }
   body main section.GPA form div.input button i {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     pointer-events: none;
     color: white;
   }
