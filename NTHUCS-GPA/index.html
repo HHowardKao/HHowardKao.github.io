@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>清大資工GPA計算機</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- 開場動畫之背景 -->
+    <section class="wrapper">
+      <!-- 開場動畫 -->
+      <section class="animation">
+        <!-- 封面照片 -->
+        <div class="image">
+          <img src="./NTHU.jpg" alt="封面照片" />
+        </div>
+        <!-- 滑動效果 -->
+        <div class="slider"></div>
+      </section>
+    </section>
+
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">首頁</a></li>
+          <li>
+            <a
+              href="https://registra.site.nthu.edu.tw/var/file/211/1211/img/609/grade-plan.pdf"
+              target="_blank"
+              >清大GPA說明</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="GPA">
+        <h1>清大資工GPA計算機</h1>
+        <form>
+          <div class="input">
+            <select name="course" class="course">
+              <option value="">CS課程名稱</option>
+              <optgroup label="一年級必修">
+                <option value="3">微積分(一)</option>
+                <option value="3">微積分(二)</option>
+                <option value="3">普物/普化/生科(一)</option>
+                <option value="3">普物/普化/生科(二)</option>
+                <option value="3">計算機程式設計(一)</option>
+                <option value="3">計算機程式設計(二)</option>
+                <option value="3">離散數學</option>
+                <option value="3">邏輯設計</option>
+              </optgroup>
+
+              <optgroup label="二年級必修">
+                <option value="3">硬體設計與實驗</option>
+                <option value="3">線性代數</option>
+                <option value="3">資料結構</option>
+                <option value="3">軟體設計與實驗</option>
+                <option value="3">機率</option>
+                <option value="3">計算機結構</option>
+              </optgroup>
+
+              <optgroup label="三年級必修">
+                <option value="3">作業系統</option>
+                <option value="3">計算方法設計</option>
+                <option value="2">系統整合實作(一)</option>
+              </optgroup>
+
+              <optgroup label="四年級必修">
+                <option value="2">系統整合實作(二)</option>
+              </optgroup>
+              <optgroup label="113-1研究所課程">
+                <option value="1">書報討論</option>
+                <option value="3">晶片應用系統簡介</option>
+                <option value="3">寬頻行動通訊</option>
+                <option value="3">物聯網技術與應用</option>
+                <option value="3">FPGA結構及設計自動化</option>
+                <option value="3">計算機網路</option>
+                <option value="3">網路之隨機程序</option>
+                <option value="3">計算生物學</option>
+                <option value="3">隨機演算法</option>
+                <option value="3">計算理論</option>
+                <option value="3">量子計算概論</option>
+                <option value="3">高等編譯器</option>
+                <option value="3">虛擬化技術與應用</option>
+                <option value="3">平行程式</option>
+                <option value="3">進階高效能計算叢集電腦實務</option>
+                <option value="3">軟體專案管理</option>
+                <option value="3">遊戲程式設計</option>
+                <option value="3">繪圖程式設計與應用</option>
+                <option value="3">多媒體技術於運動科學之應用</option>
+                <option value="3">醫學資訊簡介</option>
+                <option value="3">人工智慧倫理、法律與社會</option>
+                <option value="3">演化計算</option>
+                <option value="3">自然語言處理</option>
+                <option value="3">深度學習</option>
+                <option value="3">圖探勘</option>
+                <option value="2">研究方法一</option>
+                <option value="2">行動計算專題</option>
+                <option value="2">邊緣智慧專題</option>
+                <option value="2">資料庫系統專題(二)</option>
+                <option value="2">人工智慧運算架構與系統(一)</option>
+                <option value="2">人工智慧運算架構與系統(二)</option>
+                <option value="3">賽局理論及應用</option>
+                <option value="1">資訊應用書報討論</option>
+                <option value="3">資料探勘與應用</option>
+                <option value="3">高等資料庫</option>
+                <option value="2">資訊安全實作(一)</option>
+                <option value="3">威脅偵防解析與情資生成實作</option>
+              </optgroup>
+              <optgroup label="其他選修課程">
+                <option value="1">1學分選修課</option>
+                <option value="2">2學分選修課</option>
+                <option value="3">3學分選修課</option>
+                <option value="4">4學分選修課</option>
+              </optgroup></select
+            ><!--
+              --><select name="select" class="score">
+              <option value="">分數</option>
+              <option value="A+">A+</option>
+              <option value="A">A</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="B-">B-</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="C-">C-</option>
+              <option value="D+">D+</option>
+              <option value="D">D</option>
+              <option value="D-">D-</option>
+              <option value="F">F</option></select
+            ><!--
+              --><button class="trash-button">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </form>
+        <form>
+          <div class="input">
+            <select name="course" class="course">
+              <option value="">CS課程名稱</option>
+              <optgroup label="一年級必修">
+                <option value="3">微積分(一)</option>
+                <option value="3">微積分(二)</option>
+                <option value="3">普物/普化/生科(一)</option>
+                <option value="3">普物/普化/生科(二)</option>
+                <option value="3">計算機程式設計(一)</option>
+                <option value="3">計算機程式設計(二)</option>
+                <option value="3">離散數學</option>
+                <option value="3">邏輯設計</option>
+              </optgroup>
+
+              <optgroup label="二年級必修">
+                <option value="3">硬體設計與實驗</option>
+                <option value="3">線性代數</option>
+                <option value="3">資料結構</option>
+                <option value="3">軟體設計與實驗</option>
+                <option value="3">機率</option>
+                <option value="3">計算機結構</option>
+              </optgroup>
+
+              <optgroup label="三年級必修">
+                <option value="3">作業系統</option>
+                <option value="3">計算方法設計</option>
+                <option value="2">系統整合實作(一)</option>
+              </optgroup>
+
+              <optgroup label="四年級必修">
+                <option value="2">系統整合實作(二)</option>
+              </optgroup>
+              <optgroup label="113-1研究所課程">
+                <option value="1">書報討論</option>
+                <option value="3">晶片應用系統簡介</option>
+                <option value="3">寬頻行動通訊</option>
+                <option value="3">物聯網技術與應用</option>
+                <option value="3">FPGA結構及設計自動化</option>
+                <option value="3">計算機網路</option>
+                <option value="3">網路之隨機程序</option>
+                <option value="3">計算生物學</option>
+                <option value="3">隨機演算法</option>
+                <option value="3">計算理論</option>
+                <option value="3">量子計算概論</option>
+                <option value="3">高等編譯器</option>
+                <option value="3">虛擬化技術與應用</option>
+                <option value="3">平行程式</option>
+                <option value="3">進階高效能計算叢集電腦實務</option>
+                <option value="3">軟體專案管理</option>
+                <option value="3">遊戲程式設計</option>
+                <option value="3">繪圖程式設計與應用</option>
+                <option value="3">多媒體技術於運動科學之應用</option>
+                <option value="3">醫學資訊簡介</option>
+                <option value="3">人工智慧倫理、法律與社會</option>
+                <option value="3">演化計算</option>
+                <option value="3">自然語言處理</option>
+                <option value="3">深度學習</option>
+                <option value="3">圖探勘</option>
+                <option value="2">研究方法一</option>
+                <option value="2">行動計算專題</option>
+                <option value="2">邊緣智慧專題</option>
+                <option value="2">資料庫系統專題(二)</option>
+                <option value="2">人工智慧運算架構與系統(一)</option>
+                <option value="2">人工智慧運算架構與系統(二)</option>
+                <option value="3">賽局理論及應用</option>
+                <option value="1">資訊應用書報討論</option>
+                <option value="3">資料探勘與應用</option>
+                <option value="3">高等資料庫</option>
+                <option value="2">資訊安全實作(一)</option>
+                <option value="3">威脅偵防解析與情資生成實作</option>
+              </optgroup>
+              <optgroup label="其他選修課程">
+                <option value="1">1學分選修課</option>
+                <option value="2">2學分選修課</option>
+                <option value="3">3學分選修課</option>
+                <option value="4">4學分選修課</option>
+              </optgroup></select
+            ><!--
+              --><select name="select" class="score">
+              <option value="">分數</option>
+              <option value="A+">A+</option>
+              <option value="A">A</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="B-">B-</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="C-">C-</option>
+              <option value="D+">D+</option>
+              <option value="D">D</option>
+              <option value="D-">D-</option>
+              <option value="F">F</option></select
+            ><!--
+              --><button class="trash-button">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </form>
+        <form>
+          <div class="input">
+            <select name="course" class="course">
+              <option value="">CS課程名稱</option>
+              <optgroup label="一年級必修">
+                <option value="3">微積分(一)</option>
+                <option value="3">微積分(二)</option>
+                <option value="3">普物/普化/生科(一)</option>
+                <option value="3">普物/普化/生科(二)</option>
+                <option value="3">計算機程式設計(一)</option>
+                <option value="3">計算機程式設計(二)</option>
+                <option value="3">離散數學</option>
+                <option value="3">邏輯設計</option>
+              </optgroup>
+
+              <optgroup label="二年級必修">
+                <option value="3">硬體設計與實驗</option>
+                <option value="3">線性代數</option>
+                <option value="3">資料結構</option>
+                <option value="3">軟體設計與實驗</option>
+                <option value="3">機率</option>
+                <option value="3">計算機結構</option>
+              </optgroup>
+
+              <optgroup label="三年級必修">
+                <option value="3">作業系統</option>
+                <option value="3">計算方法設計</option>
+                <option value="2">系統整合實作(一)</option>
+              </optgroup>
+
+              <optgroup label="四年級必修">
+                <option value="2">系統整合實作(二)</option>
+              </optgroup>
+              <optgroup label="113-1研究所課程">
+                <option value="1">書報討論</option>
+                <option value="3">晶片應用系統簡介</option>
+                <option value="3">寬頻行動通訊</option>
+                <option value="3">物聯網技術與應用</option>
+                <option value="3">FPGA結構及設計自動化</option>
+                <option value="3">計算機網路</option>
+                <option value="3">網路之隨機程序</option>
+                <option value="3">計算生物學</option>
+                <option value="3">隨機演算法</option>
+                <option value="3">計算理論</option>
+                <option value="3">量子計算概論</option>
+                <option value="3">高等編譯器</option>
+                <option value="3">虛擬化技術與應用</option>
+                <option value="3">平行程式</option>
+                <option value="3">進階高效能計算叢集電腦實務</option>
+                <option value="3">軟體專案管理</option>
+                <option value="3">遊戲程式設計</option>
+                <option value="3">繪圖程式設計與應用</option>
+                <option value="3">多媒體技術於運動科學之應用</option>
+                <option value="3">醫學資訊簡介</option>
+                <option value="3">人工智慧倫理、法律與社會</option>
+                <option value="3">演化計算</option>
+                <option value="3">自然語言處理</option>
+                <option value="3">深度學習</option>
+                <option value="3">圖探勘</option>
+                <option value="2">研究方法一</option>
+                <option value="2">行動計算專題</option>
+                <option value="2">邊緣智慧專題</option>
+                <option value="2">資料庫系統專題(二)</option>
+                <option value="2">人工智慧運算架構與系統(一)</option>
+                <option value="2">人工智慧運算架構與系統(二)</option>
+                <option value="3">賽局理論及應用</option>
+                <option value="1">資訊應用書報討論</option>
+                <option value="3">資料探勘與應用</option>
+                <option value="3">高等資料庫</option>
+                <option value="2">資訊安全實作(一)</option>
+                <option value="3">威脅偵防解析與情資生成實作</option>
+              </optgroup>
+              <optgroup label="其他選修課程">
+                <option value="1">1學分選修課</option>
+                <option value="2">2學分選修課</option>
+                <option value="3">3學分選修課</option>
+                <option value="4">4學分選修課</option>
+              </optgroup></select
+            ><!--
+              --><select name="select" class="score">
+              <option value="">分數</option>
+              <option value="A+">A+</option>
+              <option value="A">A</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="B-">B-</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="C-">C-</option>
+              <option value="D+">D+</option>
+              <option value="D">D</option>
+              <option value="D-">D-</option>
+              <option value="F">F</option></select
+            ><!--
+              --><button class="trash-button">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </form>
+        <button type="button" class="plus">
+          <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="result">
+          <p>Grade Point Average<br />(GPA)</p>
+          <h2 id="result">0.00</h2>
+        </div>
+      </section>
+    </main>
+  </body>
+  <!-- GSAP抓取TimelineMax -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+    integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <!-- GSAP抓取TweenMax -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+    integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="./app.js"></script>
+</html>

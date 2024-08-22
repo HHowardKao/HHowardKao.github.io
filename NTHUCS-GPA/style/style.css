@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.active {
+  color: lightgoldenrodyellow;
+}
+body {
+  background-color: rgb(127, 16, 132);
+}
+body section.wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+body section.wrapper section.animation {
+  margin-top: 10vh;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body section.wrapper section.animation .image {
+  width: 100%;
+  height: 0;
+}
+body section.wrapper section.animation .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+body section.wrapper section.animation .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(127, 16, 132));
+  z-index: -1;
+}
+body header {
+  background-color: rgb(181, 181, 182);
+}
+body header nav {
+  box-shadow: 0 8px 6px -6px black;
+}
+body header nav ul {
+  display: flex;
+  list-style-type: none;
+}
+body header nav ul li {
+  padding: 1rem;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.15rem;
+  transition: all 0.3 ease;
+}
+body header nav ul li a:hover {
+  color: lightgoldenrodyellow;
+}
+body main section.GPA {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+body main section.GPA h1 {
+  font-size: 2rem;
+  color: white;
+}
+body main section.GPA form div.input select {
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  border: 0.25px solid black;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+body main section.GPA form div.input button {
+  border: none;
+  cursor: pointer;
+  background-color: rgb(127, 16, 132);
+}
+body main section.GPA form div.input button i {
+  font-size: 1.5rem;
+  pointer-events: none;
+  color: white;
+}
+body main section.GPA button.plus {
+  margin: 5vh 0vh;
+  background-color: rgb(127, 16, 132);
+  border: none;
+  cursor: pointer;
+}
+body main section.GPA button.plus i {
+  font-size: 2.5rem;
+  color: white;
+}
+body main section.GPA div.result {
+  width: 30vh;
+  height: 30vh;
+  border: 3px solid red;
+  border-radius: 50%;
+  text-align: center;
+  animation: border_color 10s infinite;
+}
+body main section.GPA div.result p {
+  margin-top: 10vh;
+  color: white;
+}
+body main section.GPA div.result h2 {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+@keyframes border_color {
+  0% {
+    border-color: lightpink;
+  }
+  15% {
+    border-color: lightsalmon;
+  }
+  30% {
+    border-color: lightgoldenrodyellow;
+  }
+  45% {
+    border-color: lightgreen;
+  }
+  60% {
+    border-color: lightblue;
+  }
+  75% {
+    border-color: #5959f7;
+  }
+  90% {
+    border-color: rgb(133, 97, 133);
+  }
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@media screen and (max-width: 700px) {
+  body section.wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+  }
+  body section.wrapper section.animation {
+    margin-top: 30vh;
+    height: 40vh;
+  }
+  body section.wrapper section.animation .image {
+    width: 100%;
+    height: 0;
+  }
+  body section.wrapper section.animation .image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  body section.wrapper section.animation .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      to right,
+      rgb(255, 255, 255),
+      rgb(127, 16, 132)
+    );
+    z-index: -1;
+  }
+  body main section.GPA form div.input select {
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    border: 0.25px solid black;
+    padding: 0.3rem;
+    margin: 0.3rem;
+  }
+  body main section.GPA form div.input button {
+    border: none;
+    cursor: pointer;
+    background-color: rgb(127, 16, 132);
+  }
+  body main section.GPA form div.input button i {
+    font-size: 1rem;
+    pointer-events: none;
+    color: white;
+  }
+} /*# sourceMappingURL=style.css.map */
