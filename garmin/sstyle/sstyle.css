@@ -1,0 +1,428 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+body a.active {
+  color: rgb(125, 122, 120);
+}
+body section.wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+body section.wrapper section.animation {
+  margin-top: 10vh;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body section.wrapper section.animation .image {
+  width: 100%;
+  height: 0;
+}
+body section.wrapper section.animation .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section.wrapper section.animation .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 0, 0));
+  z-index: -1;
+}
+body header {
+  background-color: rgb(255, 255, 255);
+}
+body header nav {
+  box-shadow: 0 8px 6px -6px black;
+}
+body header nav ul {
+  display: flex;
+  list-style-type: none;
+}
+body header nav ul li {
+  padding: 1rem;
+}
+body header nav ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  transition: all 0.3 ease;
+}
+body header nav ul li a:hover {
+  color: rgb(125, 122, 120);
+}
+body main section.myself {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main section.myself figure {
+  padding: 1rem;
+}
+body main section.myself figure img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+body main section.myself div.name {
+  font-size: 2rem;
+  text-align: center;
+}
+body main section.school {
+  font-size: 1.5rem;
+  display: flex;
+  margin-left: 20vw;
+  align-items: center;
+}
+body main section.school h3 {
+  text-align: center;
+  background-color: rgb(109, 207, 246);
+}
+body main section.school div.school div.NCTU {
+  display: flex;
+  align-items: center;
+}
+body main section.school div.school div.NCTU img {
+  width: 7vh;
+  height: 7vh;
+  border-radius: 50%;
+}
+body main section.school div.school div.NTHU {
+  display: flex;
+  align-items: center;
+}
+body main section.school div.school div.NTHU img {
+  width: 7vh;
+  height: 7vh;
+  border-radius: 50%;
+}
+body main section.event {
+  font-size: 1.5rem;
+  display: flex;
+  margin-left: 20vw;
+  align-items: center;
+}
+body main section.event h3 {
+  text-align: center;
+  background-color: rgb(109, 207, 246);
+}
+body main section.event div.event div.ey {
+  display: flex;
+  align-items: center;
+}
+body main section.event div.event div.ey img {
+  width: 7vh;
+  height: 7vh;
+  border-radius: 50%;
+}
+body main section.certificate {
+  font-size: 1.5rem;
+  display: flex;
+  margin-left: 20vw;
+  align-items: center;
+}
+body main section.certificate h3 {
+  text-align: center;
+  background-color: rgb(109, 207, 246);
+}
+body main section.certificate div.certificate div.microsoft1 {
+  display: flex;
+  align-items: center;
+}
+body main section.certificate div.certificate div.microsoft1 img {
+  width: 7vh;
+  height: 7vh;
+  border-radius: 50%;
+}
+body main section.certificate div.certificate div.microsoft2 {
+  display: flex;
+  align-items: center;
+}
+body main section.certificate div.certificate div.microsoft2 img {
+  width: 7vh;
+  height: 7vh;
+  border-radius: 50%;
+}
+body main section.certificate div.certificate div.aws {
+  display: flex;
+  align-items: center;
+}
+body main section.certificate div.certificate div.aws img {
+  width: 7vh;
+  height: 7vh;
+  border-radius: 50%;
+}
+body main section.skill {
+  font-size: 1.5rem;
+  display: flex;
+  margin-left: 20vw;
+  align-items: center;
+}
+body main section.skill h3 {
+  text-align: center;
+  background-color: rgb(109, 207, 246);
+}
+body main section.skill div.skill div.python {
+  display: flex;
+  align-items: center;
+}
+body main section.skill div.skill div.python img {
+  width: 7vh;
+  height: 7vh;
+  border-radius: 50%;
+}
+body main section.skill div.skill div.html {
+  display: flex;
+  align-items: center;
+}
+body main section.skill div.skill div.html img {
+  width: 7vh;
+  height: 7vh;
+  border-radius: 50%;
+}
+body main section.skill div.skill div.js {
+  display: flex;
+  align-items: center;
+}
+body main section.skill div.skill div.js img {
+  width: 7vh;
+  height: 7vh;
+  border-radius: 50%;
+}
+body main section.other {
+  font-size: 1.5rem;
+  display: flex;
+  margin-left: 20vw;
+  align-items: center;
+}
+body main section.other h3 {
+  text-align: center;
+  background-color: rgb(109, 207, 246);
+}
+body main section.other div.other {
+  display: flex;
+  align-items: center;
+}
+body main section.other div.other img {
+  margin: 0rem 1rem;
+  width: 7vh;
+  height: 7vh;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  body section.wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+  }
+  body section.wrapper section.animation {
+    margin-top: 30vh;
+    height: 40vh;
+  }
+  body section.wrapper section.animation .image {
+    width: 100%;
+    height: 0;
+  }
+  body section.wrapper section.animation .image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body section.wrapper section.animation .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 0, 0));
+    z-index: -1;
+  }
+  body main section.myself div.name {
+    font-size: 1.5rem;
+  }
+  body main section.school {
+    margin-left: 0;
+    font-size: 1rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  body main section.school h3 {
+    text-align: center;
+    background-color: rgb(109, 207, 246);
+  }
+  body main section.school div.NCTU {
+    display: flex;
+    align-items: center;
+  }
+  body main section.school div.NCTU img {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+  }
+  body main section.school div.NTHU {
+    display: flex;
+    align-items: center;
+  }
+  body main section.school div.NTHU img {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+  }
+  body main section.event {
+    margin-left: 0;
+    font-size: 1rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  body main section.event h3 {
+    text-align: center;
+    background-color: rgb(109, 207, 246);
+  }
+  body main section.event div.ey {
+    display: flex;
+    align-items: center;
+  }
+  body main section.event div.ey img {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+  }
+  body main section.certificate {
+    margin-left: 0;
+    font-size: 1rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  body main section.certificate h3 {
+    text-align: center;
+    background-color: rgb(109, 207, 246);
+  }
+  body main section.certificate div.microsoft1 {
+    display: flex;
+    align-items: center;
+  }
+  body main section.certificate div.microsoft1 img {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+  }
+  body main section.certificate div.microsoft2 {
+    display: flex;
+    align-items: center;
+  }
+  body main section.certificate div.microsoft2 img {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+  }
+  body main section.certificate div.aws {
+    display: flex;
+    align-items: center;
+  }
+  body main section.certificate div.aws img {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+  }
+  body main section.skill {
+    margin-left: 0;
+    font-size: 1rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  body main section.skill h3 {
+    text-align: center;
+    background-color: rgb(109, 207, 246);
+  }
+  body main section.skill div.python {
+    display: flex;
+    align-items: center;
+  }
+  body main section.skill div.python img {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+  }
+  body main section.skill div.html {
+    display: flex;
+    align-items: center;
+  }
+  body main section.skill div.html img {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+  }
+  body main section.skill div.js {
+    display: flex;
+    align-items: center;
+  }
+  body main section.skill div.js img {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+  }
+  body main section.other {
+    margin-left: 0;
+    font-size: 1rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  body main section.other h3 {
+    text-align: center;
+    background-color: rgb(109, 207, 246);
+  }
+  body main section.other div.other img {
+    align-items: center;
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+  }
+  body header section.logo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 置中 */
+  }
+  body header section.logo img {
+    width: 10vw;
+    height: 10vw;
+  }
+  body header section.logo h1 {
+    font-size: 1.5rem;
+  }
+  body header nav ul {
+    flex-direction: column;
+  }
+  body header nav ul li {
+    padding: 0.25rem 0.25rem;
+    text-align: center;
+  }
+  body header nav ul li a {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=sstyle.css.map */

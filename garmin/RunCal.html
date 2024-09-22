@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配速計算機</title>
+
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">首頁(個人履歷)</a></li>
+          <li>
+            <a href="./RunInfo.html">2024路跑資訊</a>
+          </li>
+          <li><a href="#" class="active">配速計算機</a></li>
+          <li>
+            <a
+              href="https://www.garmin.com.tw/products/wearables/?cat=running"
+              target="_blank"
+              >Garmin跑步手錶</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="GPA">
+        <h1>跑步配速計算機</h1>
+        <p>(可支援分段配速)</p>
+        <form>
+          <div class="input">
+            <select name="minute" class="minute">
+              <option value="">分鐘</option>
+              <option value="60">1分</option>
+              <option value="120">2分</option>
+              <option value="180">3分</option>
+              <option value="240">4分</option>
+              <option value="300">5分</option>
+              <option value="360">6分</option>
+              <option value="420">7分</option>
+              <option value="480">8分</option>
+              <option value="540">9分</option>
+              <option value="600">10分</option>
+              <option value="660">11分</option>
+              <option value="720">12分</option>
+              <option value="780">13分</option>
+              <option value="840">14分</option>
+              <option value="900">15分</option>
+              <option value="960">16分</option>
+              <option value="1020">17分</option>
+              <option value="1080">18分</option>
+              <option value="1140">19分</option>
+              <option value="1200">20分</option>
+              <option value="1260">21分</option>
+              <option value="1320">22分</option>
+              <option value="1380">23分</option>
+              <option value="1440">24分</option>
+              <option value="1500">25分</option>
+              <option value="1560">26分</option>
+              <option value="1620">27分</option>
+              <option value="1680">28分</option>
+              <option value="1740">29分</option>
+              <option value="1800">30分</option></select
+            ><!--
+              --><select name="second" class="second">
+              <option value="">秒數</option>
+              <option value="0">0秒</option>
+              <option value="10">10秒</option>
+              <option value="20">20秒</option>
+              <option value="30">30秒</option>
+              <option value="40">40秒</option>
+              <option value="50">50秒</option></select
+            ><!--
+              --><select name="distance" class="distance">
+              <option value="">距離</option>
+              <option value="1">1公里</option>
+              <option value="2">2公里</option>
+              <option value="3">3公里</option>
+              <option value="4">4公里</option>
+              <option value="5">5公里</option>
+              <option value="6">6公里</option>
+              <option value="7">7公里</option>
+              <option value="8">8公里</option>
+              <option value="9">9公里</option>
+              <option value="10">10公里</option>
+              <option value="11">11公里</option>
+              <option value="12">12公里</option>
+              <option value="13">13公里</option>
+              <option value="14">14公里</option>
+              <option value="15">15公里</option>
+              <option value="16">16公里</option>
+              <option value="17">17公里</option>
+              <option value="18">18公里</option>
+              <option value="19">19公里</option>
+              <option value="20">20公里</option>
+              <option value="21">21公里</option>
+              <option value="22">22公里</option>
+              <option value="23">23公里</option>
+              <option value="24">24公里</option>
+              <option value="25">25公里</option>
+              <option value="26">26公里</option>
+              <option value="27">27公里</option>
+              <option value="28">28公里</option>
+              <option value="29">29公里</option>
+              <option value="30">30公里</option>
+              <option value="31">31公里</option>
+              <option value="32">32公里</option>
+              <option value="33">33公里</option>
+              <option value="34">34公里</option>
+              <option value="35">35公里</option>
+              <option value="36">36公里</option>
+              <option value="37">37公里</option>
+              <option value="38">38公里</option>
+              <option value="39">39公里</option>
+              <option value="40">40公里</option>
+              <option value="41">41公里</option>
+              <option value="42">42公里</option></select
+            ><!--
+              --><button class="trash-button">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </form>
+        <form>
+          <div class="input">
+            <select name="minute" class="minute">
+              <option value="">分鐘</option>
+              <option value="60">1分</option>
+              <option value="120">2分</option>
+              <option value="180">3分</option>
+              <option value="240">4分</option>
+              <option value="300">5分</option>
+              <option value="360">6分</option>
+              <option value="420">7分</option>
+              <option value="480">8分</option>
+              <option value="540">9分</option>
+              <option value="600">10分</option>
+              <option value="660">11分</option>
+              <option value="720">12分</option>
+              <option value="780">13分</option>
+              <option value="840">14分</option>
+              <option value="900">15分</option>
+              <option value="960">16分</option>
+              <option value="1020">17分</option>
+              <option value="1080">18分</option>
+              <option value="1140">19分</option>
+              <option value="1200">20分</option>
+              <option value="1260">21分</option>
+              <option value="1320">22分</option>
+              <option value="1380">23分</option>
+              <option value="1440">24分</option>
+              <option value="1500">25分</option>
+              <option value="1560">26分</option>
+              <option value="1620">27分</option>
+              <option value="1680">28分</option>
+              <option value="1740">29分</option>
+              <option value="1800">30分</option></select
+            ><!--
+                --><select name="second" class="second">
+              <option value="">秒數</option>
+              <option value="0">0秒</option>
+              <option value="10">10秒</option>
+              <option value="20">20秒</option>
+              <option value="30">30秒</option>
+              <option value="40">40秒</option>
+              <option value="50">50秒</option></select
+            ><!--
+                --><select name="distance" class="distance">
+              <option value="">距離</option>
+              <option value="1">1公里</option>
+              <option value="2">2公里</option>
+              <option value="3">3公里</option>
+              <option value="4">4公里</option>
+              <option value="5">5公里</option>
+              <option value="6">6公里</option>
+              <option value="7">7公里</option>
+              <option value="8">8公里</option>
+              <option value="9">9公里</option>
+              <option value="10">10公里</option>
+              <option value="11">11公里</option>
+              <option value="12">12公里</option>
+              <option value="13">13公里</option>
+              <option value="14">14公里</option>
+              <option value="15">15公里</option>
+              <option value="16">16公里</option>
+              <option value="17">17公里</option>
+              <option value="18">18公里</option>
+              <option value="19">19公里</option>
+              <option value="20">20公里</option>
+              <option value="21">21公里</option>
+              <option value="22">22公里</option>
+              <option value="23">23公里</option>
+              <option value="24">24公里</option>
+              <option value="25">25公里</option>
+              <option value="26">26公里</option>
+              <option value="27">27公里</option>
+              <option value="28">28公里</option>
+              <option value="29">29公里</option>
+              <option value="30">30公里</option>
+              <option value="31">31公里</option>
+              <option value="32">32公里</option>
+              <option value="33">33公里</option>
+              <option value="34">34公里</option>
+              <option value="35">35公里</option>
+              <option value="36">36公里</option>
+              <option value="37">37公里</option>
+              <option value="38">38公里</option>
+              <option value="39">39公里</option>
+              <option value="40">40公里</option>
+              <option value="41">41公里</option>
+              <option value="42">42公里</option></select
+            ><!--
+                --><button class="trash-button">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </form>
+        <form>
+          <div class="input">
+            <select name="minute" class="minute">
+              <option value="">分鐘</option>
+              <option value="60">1分</option>
+              <option value="120">2分</option>
+              <option value="180">3分</option>
+              <option value="240">4分</option>
+              <option value="300">5分</option>
+              <option value="360">6分</option>
+              <option value="420">7分</option>
+              <option value="480">8分</option>
+              <option value="540">9分</option>
+              <option value="600">10分</option>
+              <option value="660">11分</option>
+              <option value="720">12分</option>
+              <option value="780">13分</option>
+              <option value="840">14分</option>
+              <option value="900">15分</option>
+              <option value="960">16分</option>
+              <option value="1020">17分</option>
+              <option value="1080">18分</option>
+              <option value="1140">19分</option>
+              <option value="1200">20分</option>
+              <option value="1260">21分</option>
+              <option value="1320">22分</option>
+              <option value="1380">23分</option>
+              <option value="1440">24分</option>
+              <option value="1500">25分</option>
+              <option value="1560">26分</option>
+              <option value="1620">27分</option>
+              <option value="1680">28分</option>
+              <option value="1740">29分</option>
+              <option value="1800">30分</option></select
+            ><!--
+                --><select name="second" class="second">
+              <option value="">秒數</option>
+              <option value="0">0秒</option>
+              <option value="10">10秒</option>
+              <option value="20">20秒</option>
+              <option value="30">30秒</option>
+              <option value="40">40秒</option>
+              <option value="50">50秒</option></select
+            ><!--
+                --><select name="distance" class="distance">
+              <option value="">距離</option>
+              <option value="1">1公里</option>
+              <option value="2">2公里</option>
+              <option value="3">3公里</option>
+              <option value="4">4公里</option>
+              <option value="5">5公里</option>
+              <option value="6">6公里</option>
+              <option value="7">7公里</option>
+              <option value="8">8公里</option>
+              <option value="9">9公里</option>
+              <option value="10">10公里</option>
+              <option value="11">11公里</option>
+              <option value="12">12公里</option>
+              <option value="13">13公里</option>
+              <option value="14">14公里</option>
+              <option value="15">15公里</option>
+              <option value="16">16公里</option>
+              <option value="17">17公里</option>
+              <option value="18">18公里</option>
+              <option value="19">19公里</option>
+              <option value="20">20公里</option>
+              <option value="21">21公里</option>
+              <option value="22">22公里</option>
+              <option value="23">23公里</option>
+              <option value="24">24公里</option>
+              <option value="25">25公里</option>
+              <option value="26">26公里</option>
+              <option value="27">27公里</option>
+              <option value="28">28公里</option>
+              <option value="29">29公里</option>
+              <option value="30">30公里</option>
+              <option value="31">31公里</option>
+              <option value="32">32公里</option>
+              <option value="33">33公里</option>
+              <option value="34">34公里</option>
+              <option value="35">35公里</option>
+              <option value="36">36公里</option>
+              <option value="37">37公里</option>
+              <option value="38">38公里</option>
+              <option value="39">39公里</option>
+              <option value="40">40公里</option>
+              <option value="41">41公里</option>
+              <option value="42">42公里</option></select
+            ><!--
+                --><button class="trash-button">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </form>
+        <button type="button" class="plus">
+          <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="result">
+          <p>總距離:</p>
+          <h2 id="total">0公里</h2>
+          <p>預計完成時間:</p>
+          <h2 id="result">0小時0分0秒</h2>
+        </div>
+      </section>
+    </main>
+  </body>
+  <!-- GSAP抓取TimelineMax -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+    integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <!-- GSAP抓取TweenMax -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+    integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="./app_cal.js"></script>
+</html>
