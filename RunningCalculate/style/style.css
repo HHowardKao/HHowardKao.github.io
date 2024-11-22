@@ -1,0 +1,210 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+body a.active {
+  color: rgb(125, 122, 120);
+}
+body header {
+  background-color: rgb(255, 255, 255);
+}
+body header nav {
+  box-shadow: 0 8px 6px -6px black;
+}
+body header nav ul {
+  display: flex;
+  list-style-type: none;
+}
+body header nav ul li {
+  padding: 1rem;
+}
+body header nav ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  transition: all 0.3 ease;
+}
+body header nav ul li a:hover {
+  color: rgb(125, 122, 120);
+}
+body main section.GPA {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+body main section.GPA h1 {
+  font-size: 2rem;
+  color: white;
+}
+body main section.GPA p {
+  color: white;
+  font-weight: bold;
+}
+body main section.GPA form div.input select {
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  border: 0.25px solid black;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+body main section.GPA form div.input button {
+  border: none;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+}
+body main section.GPA form div.input button i {
+  font-size: 1.5rem;
+  pointer-events: none;
+  color: white;
+}
+body main section.GPA button.plus {
+  margin: 5vh 0vh;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+body main section.GPA button.plus i {
+  font-size: 2.5rem;
+  color: white;
+}
+body main section.GPA div.result {
+  width: 30vh;
+  height: 30vh;
+  border: 3px solid red;
+  border-radius: 50%;
+  text-align: center;
+  animation: border_color 10s infinite;
+}
+body main section.GPA div.result p {
+  margin-top: 3vh;
+  color: white;
+}
+body main section.GPA div.result h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@keyframes border_color {
+  0% {
+    border-color: lightpink;
+  }
+  15% {
+    border-color: lightsalmon;
+  }
+  30% {
+    border-color: lightgoldenrodyellow;
+  }
+  45% {
+    border-color: lightgreen;
+  }
+  60% {
+    border-color: lightblue;
+  }
+  75% {
+    border-color: #5959f7;
+  }
+  90% {
+    border-color: rgb(133, 97, 133);
+  }
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@media screen and (max-width: 700px) {
+  body section.wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+  }
+  body section.wrapper section.animation {
+    margin-top: 30vh;
+    height: 40vh;
+  }
+  body section.wrapper section.animation .image {
+    width: 100%;
+    height: 0;
+  }
+  body section.wrapper section.animation .image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body section.wrapper section.animation .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(127, 16, 132));
+    z-index: -1;
+  }
+  body header section.logo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 置中 */
+  }
+  body header section.logo img {
+    width: 10vw;
+    height: 10vw;
+  }
+  body header section.logo h1 {
+    font-size: 1.5rem;
+  }
+  body header nav ul {
+    flex-direction: column;
+  }
+  body header nav ul li {
+    padding: 0.25rem 0.25rem;
+    text-align: center;
+  }
+  body header nav ul li a {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  body main section.GPA form div.input select {
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    border: 0.25px solid black;
+    padding: 0.3rem;
+    margin: 0.3rem 0.1rem;
+  }
+  body main section.GPA form div.input button {
+    border: none;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+  }
+  body main section.GPA form div.input button i {
+    font-size: 0.8rem;
+    pointer-events: none;
+    color: white;
+  }
+  body main section.GPA div.result h2 {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
